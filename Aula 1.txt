@@ -1,0 +1,22 @@
+#instalar o pacote
+install.packages("dplyr")
+
+#ler o pacote
+library(dplyr)
+
+glimpse(iris)
+
+select(iris, petal.length, Petal.wifth)
+filter(iris, petal.length > 2)
+mutate(iris, Pteal.Length2= Pteal.Length + 2)
+
+
+iris %>% 
+select(specles)
+  filter(Petal.length > 2) %>% 
+mutate(iris, Pteal.Length2= Pteal.Length + 2)
+
+iris %>% 
+select(specles)
+  filter(Petal.length > 2) %>%
+mutate(Petal = Petal.Length + 2) %>%
